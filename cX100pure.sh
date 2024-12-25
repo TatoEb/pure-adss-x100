@@ -1,1 +1,0 @@
-cd ~ && sudo chmod 777 -R /media/put-your-ovpn-files-here && sudo mcedit /media/put-your-ovpn-files-here/x100-config.txt
