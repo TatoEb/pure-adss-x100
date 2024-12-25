@@ -20,6 +20,7 @@ To start X100 again enter:  ./X100p.sh
 
 
 To change X100' config file use this script:  ./cX100p.sh
+
 (after every changes in x100-config.txt you must restart X100 in order to start with new parameters)
 
 P.S. If you have your own *.ovpn files and you want to add them to X100 then just create a folder in /media/put-your-ovpn-files-here/  with a name of your VPN service, put your *.ovpn files with credentials.txt (if it's needed) and possibly with other files (*.crt, *.key,*.pem if they are needed) to this folder and run X100. You can add as many folders as VPNs you have. 
