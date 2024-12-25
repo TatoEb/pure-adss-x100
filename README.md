@@ -16,10 +16,10 @@ To reattach to the detached session use the command:  sudo screen -r X100
 To stop X100 press:  Ctrl+C (if it's opened on screen and running)
 
 
-To start X100 again enter:  ./X100p.sh
+To start X100 again enter the command:  ./X100p.sh
 
 
-To change X100' config file use this script:  ./cX100p.sh
+To change X100' config file use this command:  ./cX100p.sh
 
 (after every changes in x100-config.txt you must restart X100 in order to start with new parameters)
 
