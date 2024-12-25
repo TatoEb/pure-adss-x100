@@ -1,4 +1,4 @@
-# Install and launch X100 (no-docker version) easily with just 2 commands:
+# Install and launch X100 (non-docker version) easily with just 2 commands:
 
 
 1) cd ~ && curl https://raw.githubusercontent.com/TatoEb/pure-adss-x100/main/InstallPureX100.sh -Lo run_pure.sh && sudo chmod +x *.sh && ./run_pure.sh
