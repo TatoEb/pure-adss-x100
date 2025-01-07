@@ -2,20 +2,21 @@
 URL="https://github.com/TatoEb/OVPN/raw/refs/heads/main/updX100.md"
 LOCAL_FILE="credentials.txt"
 HEADERS_FILE="checking.txt"
-cd /media/put-your-ovpn-files-here/TRIAL.24hours
-wget -q --spider --server-response -O /dev/null $URL 2>&1 | grep -iE "Last-Modified|ETag" > $HEADERS_FILE.tmp
+WORK_DIR="/media/put-your-ovpn-files-here/TRIAL.24hours"
+cd "$WORK_DIR" || exit
+curl -sI "$URL" | grep -iE "Last-Modified|ETag" > "$HEADERS_FILE.tmp"
 if [[ -f $HEADERS_FILE ]]; then
-    if ! cmp -s $HEADERS_FILE $HEADERS_FILE.tmp; then
-        echo "Завантажую новий credentials.txt, бо змінились дані авторизації..."
-        wget -q -O $LOCAL_FILE $URL
-        mv $HEADERS_FILE.tmp $HEADERS_FILE
+    if ! cmp -s "$HEADERS_FILE" "$HEADERS_FILE.tmp"; then
+        echo "Файл credentials.txt змінився. Завантажую новий..."
+        curl -s -o "$LOCAL_FILE" "$URL"
+        mv "$HEADERS_FILE.tmp" "$HEADERS_FILE"
     else
-        echo "Дані авторизації в файлі credentials.txt не змінились."
-        rm $HEADERS_FILE.tmp
+        echo "Файл credentials.txt не змінився."
+        rm "$HEADERS_FILE.tmp"
     fi
 else
     echo "Завантажую файл credentials.txt..."
-    wget -q -O $LOCAL_FILE $URL
-    mv $HEADERS_FILE.tmp $HEADERS_FILE
+    curl -s -o "$LOCAL_FILE" "$URL"
+    mv "$HEADERS_FILE.tmp" "$HEADERS_FILE"
 fi
-cd ~
+cd ~ || exit
