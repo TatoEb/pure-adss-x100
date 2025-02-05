@@ -9,7 +9,7 @@ if [[ -f $HEADERS_FILE ]]; then
         echo "A newer file 'credentials.txt' is downloading..."
         wget -q -O $LOCAL_FILE $URL
         mv $HEADERS_FILE.tmp $HEADERS_FILE
-        echo "Your new credentils are bellow:"
+        echo "New credentials are bellow:"
         cat /media/put-your-ovpn-files-here/TRIAL.24hours/credentials.txt
     else
         echo "There is no change in the file 'credentials.txt'."
