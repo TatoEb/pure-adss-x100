@@ -22,6 +22,6 @@ if [ -d "$TEKA" ]; then
     fi
     cd ~
 else
-    echo "It seems like you don't need a trial VPN because" && echo "the folder 'TRIAL.24hours' doesn't exist or has been deleted." && echo "Exiting the script.. Done."
+    echo "It seems like you don't need a trial VPN because" && echo "the folder 'TRIAL.24hours' doesn't exist or has been deleted." && echo "Exit the script."
     exit 1
 fi
