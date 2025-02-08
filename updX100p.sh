@@ -12,7 +12,7 @@ if [ -d "$TEKA" ]; then
             wget -q -O $LOCAL_FILE $URL && cat /media/put-your-ovpn-files-here/TRIAL.24hours/credentials.txt
             mv $HEADERS_FILE.tmp $HEADERS_FILE
         else
-            echo "There is no change in the file 'credentials.txt'."
+            echo "There are no changes in the file 'credentials.txt'."
             rm $HEADERS_FILE.tmp
         fi
     else
